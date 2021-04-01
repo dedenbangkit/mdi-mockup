@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import Form from "@rjsf/bootstrap-4";
 import newArray, { company } from "../data";
+import { field, arrayField, objectField } from "../util/custom-form";
 
 const schema = {
   type: "object",
@@ -11,14 +12,24 @@ const schema = {
       type: "object",
       properties: {
         name: {
-          title: "Activity name",
+          title: "Activity Name",
           type: "string",
         },
+        description: {
+          title: "Description",
+          type: "string",
+        },
+        budget: {
+          title: "Budget",
+          type: "integer",
+        },
       },
-      required: ["name"],
+      required: ["name", "description", "budget"],
     },
     fixedArrayOfConditionals: {
-      title: "Add Forms",
+      title: "Forms",
+      iterationTitle: "Form",
+      description: "Please click add more below the box to add more form",
       type: "array",
       items: [
         {
@@ -26,7 +37,6 @@ const schema = {
         },
       ],
       additionalItems: {
-        title: "----",
         $ref: "#/definitions/forms",
       },
     },
@@ -67,7 +77,13 @@ const schema = {
   },
 };
 
-const uiSchema = {};
+const uiSchema = {
+  activityDetals: {
+    description: {
+      "ui:widget": "textarea",
+    },
+  },
+};
 
 const ActivityNew = () => {
   return (
@@ -78,6 +94,9 @@ const ActivityNew = () => {
           schema={schema}
           onSubmit={(e) => console.log(e)}
           onError={(e) => console.error(e)}
+          field={field}
+          ArrayFieldTemplate={arrayField}
+          ObjectFieldTemplate={objectField}
         />
       </Col>
     </Row>
