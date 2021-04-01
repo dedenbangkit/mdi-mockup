@@ -5,7 +5,6 @@ const Topbar = (props) => {
   return (
     <Navbar
       className="navbar navbar-dark sticky-top flex-md-nowrap p-0"
-      activeKey="/"
       onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
     >
       <Navbar.Brand href="#home" className="col-sm-3 col-md-2 mr-0">

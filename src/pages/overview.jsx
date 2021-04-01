@@ -53,8 +53,8 @@ const OverView = () => {
               <ListGroup.Item key={i}>{company.catchPhrase()}</ListGroup.Item>
             ))}
           </ListGroup>
-          <Card.Footer>Some quick example text</Card.Footer>
         </Card>
+        <Card.Footer>Some quick example text</Card.Footer>
       </Col>
     </Row>
   );

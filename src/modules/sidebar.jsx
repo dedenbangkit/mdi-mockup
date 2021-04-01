@@ -15,7 +15,6 @@ const Sidebar = ({ changePage, page }) => {
     <Nav
       className="col-md-2 d-none d-md-block bg-light sidebar"
       onSelect={(e) => changePage(e)}
-      defaultActiveKey="overview"
     >
       <div className="sidebar-sticky">
         <SubNav title="Home" />

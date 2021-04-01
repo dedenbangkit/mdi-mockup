@@ -1,9 +1,10 @@
 import React from "react";
 import { Row, Col, Table, Button } from "react-bootstrap";
-import newArray, { dt, lorem, finance } from "../data";
+import newArray, { dt, lorem, company } from "../data";
 import * as Icon from "react-feather";
 
-const Activity = () => {
+const Form = () => {
+  const status = ["Published", "Draft"];
   return (
     <Row>
       <Col md={12}>
@@ -14,19 +15,23 @@ const Activity = () => {
                 No
               </th>
               <th width={300}>Project Name</th>
+              <th>Form Name</th>
               <th style={{ textAlign: "center" }} width={80}>
-                Due Date
+                Questions
               </th>
               <th style={{ textAlign: "center" }} width={50}>
-                Funds
+                Created at
               </th>
               <th style={{ textAlign: "center" }} width={50}>
-                Total Forms
+                Status
               </th>
               <th style={{ textAlign: "center" }} width={50}>
-                Applicants
+                Target
               </th>
-              <th style={{ textAlign: "center" }} width={80}>
+              <th style={{ textAlign: "center" }} width={50}>
+                Archived
+              </th>
+              <th style={{ textAlign: "center" }} width={100}>
                 Action
               </th>
             </tr>
@@ -35,13 +40,21 @@ const Activity = () => {
             {newArray().map((x, i) => (
               <tr key={i}>
                 <td align="center">{i + 1}</td>
+                <td>{company.catchPhrase()}</td>
                 <td>{lorem.sentences(1)}</td>
-                <td align="center">{dt()}</td>
-                <td align="right">{finance.amount()}</td>
-                <td align="center">{Math.floor(Math.random() * 20) + 2}</td>
-                <td align="right">{Math.floor(Math.random() * 100)}</td>
+                <td align="center">{Math.floor(Math.random() * 100)}</td>
+                <td align="center">{dt("past")}</td>
                 <td align="center">
-                  <Button variant="danger" size="sm">
+                  {status[Math.floor(Math.random() * status.length)]}
+                </td>
+                <td align="center">{Math.floor(Math.random() * 100) + 50}</td>
+                <td align="center">{Math.floor(Math.random() * 50)}</td>
+                <td align="center">
+                  <Button
+                    variant="danger"
+                    size="sm"
+                    style={{ marginRight: "1rem" }}
+                  >
                     <Icon.Edit size={12} /> Edit
                   </Button>
                 </td>
@@ -54,4 +67,4 @@ const Activity = () => {
   );
 };
 
-export default Activity;
+export default Form;
