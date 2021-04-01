@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Form, FormControl } from "react-bootstrap";
 
-const Topbar = (props) => {
+const Topbar = ({ page }) => {
   return (
     <Navbar
       className="navbar navbar-dark sticky-top flex-md-nowrap p-0"
@@ -11,7 +11,11 @@ const Topbar = (props) => {
         MDI Dashboard
       </Navbar.Brand>
       <Form className="form-control-dark w-100">
-        <FormControl type="text" placeholder="Search" />
+        <FormControl
+          type="text"
+          placeholder="Search"
+          className={page !== "find-enumerator" && "transparent"}
+        />
       </Form>
       <Nav className="px-3">
         <Nav.Item className="text-nowrap">

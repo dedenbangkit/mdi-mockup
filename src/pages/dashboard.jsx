@@ -10,7 +10,7 @@ const Dashboard = (props) => {
   return (
     <>
       <div id="topbar">
-        <Topbar />
+        <Topbar page={page} />
       </div>
       <Container className="main" fluid>
         <Row className="main">
@@ -35,7 +35,11 @@ const Dashboard = (props) => {
                 </Col>
               )}
             </Row>
-            <Page page={page} showNewButton={showNewButton} />
+            <Page
+              page={page}
+              showNewButton={showNewButton}
+              changePage={changePage}
+            />
           </Col>
         </Row>
       </Container>

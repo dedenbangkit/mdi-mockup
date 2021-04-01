@@ -3,7 +3,7 @@ import { Row, Col, Table, Button } from "react-bootstrap";
 import newArray, { dt, lorem, finance } from "../data";
 import * as Icon from "react-feather";
 
-const Activity = () => {
+const Activity = ({ changePage }) => {
   return (
     <Row>
       <Col md={12}>
@@ -18,10 +18,10 @@ const Activity = () => {
                 Due Date
               </th>
               <th style={{ textAlign: "center" }} width={50}>
-                Funds
+                Budget
               </th>
               <th style={{ textAlign: "center" }} width={50}>
-                Total Forms
+                Forms
               </th>
               <th style={{ textAlign: "center" }} width={50}>
                 Applicants
@@ -41,7 +41,11 @@ const Activity = () => {
                 <td align="center">{Math.floor(Math.random() * 20) + 2}</td>
                 <td align="right">{Math.floor(Math.random() * 100)}</td>
                 <td align="center">
-                  <Button variant="danger" size="sm">
+                  <Button
+                    variant="danger"
+                    size="sm"
+                    onClick={(e) => changePage("new-activities")}
+                  >
                     <Icon.Edit size={12} /> Edit
                   </Button>
                 </td>

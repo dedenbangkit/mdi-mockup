@@ -21,7 +21,8 @@ const address = faker.address;
 const lorem = faker.lorem;
 const company = faker.company;
 const finance = faker.finance;
+const pic = faker.image;
 
-export { name, internet, dt, commerce, address, lorem, company, finance };
+export { name, internet, dt, commerce, address, lorem, company, finance, pic };
 
 export default newArray;

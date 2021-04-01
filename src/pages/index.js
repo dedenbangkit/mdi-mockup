@@ -7,15 +7,16 @@ import Dashboard from "./dashboard";
 import OverView from "./overview";
 import Notification from "./notification";
 import Monitoring from "./monitoring";
+import EnumeratorFind from "./enumerator-find";
 
-const Page = ({ page, showNewButton }) => {
+const Page = ({ page, showNewButton, changePage }) => {
   switch (page) {
     case "notifications":
       showNewButton(false);
       return <Notification />;
     case "activities":
       showNewButton(true);
-      return <Activity />;
+      return <Activity changePage={changePage} />;
     case "new-activities":
       showNewButton(false);
       return <ActivityNew />;
@@ -25,6 +26,9 @@ const Page = ({ page, showNewButton }) => {
     case "new-forms":
       showNewButton(false);
       return <FormNew />;
+    case "find-enumerator":
+      showNewButton(false);
+      return <EnumeratorFind />;
     case "monitoring":
       showNewButton(false);
       return <Monitoring />;
