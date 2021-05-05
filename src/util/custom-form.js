@@ -65,8 +65,10 @@ const objectField = (props) => {
   return (
     <div>
       {props.description}
-      {props.properties.map((element) => (
-        <div className="property-wrapper">{element.content}</div>
+      {props.properties.map((element, i) => (
+        <div className="property-wrapper" key={i}>
+          {element.content}
+        </div>
       ))}
     </div>
   );

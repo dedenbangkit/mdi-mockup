@@ -2,8 +2,10 @@ import React from "react";
 import { Row, Col, Table, Button } from "react-bootstrap";
 import newArray, { dt, lorem, finance } from "../data";
 import * as Icon from "react-feather";
+import { useHistory } from "react-router";
 
-const Activity = ({ changePage }) => {
+const Activity = () => {
+  const history = useHistory();
   return (
     <Row>
       <Col md={12}>
@@ -44,7 +46,7 @@ const Activity = ({ changePage }) => {
                   <Button
                     variant="danger"
                     size="sm"
-                    onClick={(e) => changePage("new-activities")}
+                    onClick={(e) => history.push("/admin/activity/new")}
                   >
                     <Icon.Edit size={12} /> Edit
                   </Button>

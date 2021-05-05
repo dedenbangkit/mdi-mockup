@@ -1,12 +1,12 @@
 import React from "react";
 import { Navbar, Nav, Form, FormControl } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router";
 
-const Topbar = ({ page }) => {
+const Topbar = () => {
+  const { page } = useParams();
   return (
-    <Navbar
-      className="navbar navbar-dark sticky-top flex-md-nowrap p-0"
-      onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-    >
+    <Navbar className="navbar navbar-dark sticky-top flex-md-nowrap p-0">
       <Navbar.Brand href="#home" className="col-sm-3 col-md-2 mr-0">
         MDI Dashboard
       </Navbar.Brand>
@@ -19,7 +19,9 @@ const Topbar = ({ page }) => {
       </Form>
       <Nav className="px-3">
         <Nav.Item className="text-nowrap">
-          <Nav.Link eventKey="signout">Sign Out</Nav.Link>
+          <Nav.Link as={Link} to="/">
+            Sign Out
+          </Nav.Link>
         </Nav.Item>
       </Nav>
     </Navbar>

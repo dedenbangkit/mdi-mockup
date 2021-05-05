@@ -1,8 +1,6 @@
 import faker from "faker";
 import moment from "moment";
 
-console.log(faker);
-
 const newArray = (num = 40) => {
   return Array.from({ length: num }, () => Math.floor(Math.random() * num));
 };

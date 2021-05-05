@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Card, Badge } from "react-bootstrap";
-import newArray, { name, dt, lorem, finance } from "../data";
+import newArray, { name } from "../data";
 import * as Icon from "react-feather";
 
 const EnumeratorFind = () => {
