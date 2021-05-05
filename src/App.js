@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "aos/dist/aos.css";
+import "remixicon/fonts/remixicon.css";
 
 function App() {
   return (

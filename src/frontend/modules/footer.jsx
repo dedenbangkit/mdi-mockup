@@ -1,5 +1,62 @@
 import React from "react";
 
+const linkSocial = [
+  {
+    url: "https://github.com/akvo",
+    icon: "github",
+  },
+  {
+    url: "https://twitter.com/akvo",
+    icon: "twitter",
+  },
+  {
+    url: "https://www.linkedin.com/company/akvo/",
+    icon: "linkedin",
+  },
+  {
+    url: "http://www.facebook.com/1Akvo",
+    icon: "facebook",
+  },
+];
+
+const linkUseful = [
+  {
+    label: "Data Journey",
+    url: "https://datajourney.akvo.org/blog",
+  },
+  {
+    label: "Knowledge Library",
+    url: "https://akvo.org/knowledge-library/",
+  },
+  {
+    label: "Newsletter",
+    url: "https://akvo.org/data-journey-newsletter/",
+  },
+  {
+    label: "Stories",
+    url: "https://akvo.org/stories/",
+  },
+];
+
+const linkServices = [
+  {
+    label: "Data Portal",
+    url: "https://akvo.org/contact-us/get-in-touch",
+  },
+  {
+    label: "Mobile Apps",
+    url: "https://akvo.org/contact-us/get-in-touch",
+  },
+  {
+    label: "Automation / Jobs",
+    url: "https://akvo.org/contact-us/get-in-touch",
+  },
+  {
+    label: "Data Analysis",
+    url: "https://akvo.org/contact-us/get-in-touch",
+  },
+];
+
 const Footer = () => {
   return (
     <footer id="footer" className="footer">
@@ -9,91 +66,75 @@ const Footer = () => {
             <div className="col-lg-5 col-md-12 footer-info">
               <a href="index.html" className="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="" />
-                <span>FlexStart</span>
+                <span>MDI</span>
               </a>
               <p>
-                Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
-                nada terra videa magna derita valies darta donna mare fermentum
-                iaculis eu non diam phasellus.
+                We apply the principles of open source software, open content
+                and open data to all of our work. Find out{" "}
+                <a
+                  href="https://akvo.org/blog/open-data-content-and-software-at-akvo/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  why and how
+                </a>
+                .
               </p>
               <div className="social-links mt-3">
-                <a href="!#" className="twitter">
-                  <i className="bi bi-twitter"></i>
-                </a>
-                <a href="!#" className="facebook">
-                  <i className="bi bi-facebook"></i>
-                </a>
-                <a href="!#" className="instagram">
-                  <i className="bi bi-instagram bx bxl-instagram"></i>
-                </a>
-                <a href="!#" className="linkedin">
-                  <i className="bi bi-linkedin bx bxl-linkedin"></i>
-                </a>
+                {linkSocial.map((x, i) => (
+                  <a
+                    key={x.icon}
+                    href={x.url}
+                    className={x.icon}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className={`bi bi-${x.icon}`}></i>
+                  </a>
+                ))}
               </div>
             </div>
 
             <div className="col-lg-2 col-6 footer-links">
-              <h4>Useful Links</h4>
+              <h4>Links</h4>
               <ul>
-                <li>
-                  <i className="bi bi-chevron-right"></i> <a href="!#">Home</a>
-                </li>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="!#">About us</a>
-                </li>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="!#">Services</a>
-                </li>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="!#">Terms of service</a>
-                </li>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="!#">Privacy policy</a>
-                </li>
+                {linkUseful.map((x, i) => (
+                  <li key={i}>
+                    <i className="bi bi-chevron-right"></i>{" "}
+                    <a target="_blank" rel="noreferrer" href={x.url}>
+                      {x.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div className="col-lg-2 col-6 footer-links">
               <h4>Our Services</h4>
               <ul>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="!#">Web Design</a>
-                </li>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="!#">Web Development</a>
-                </li>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="!#">Product Management</a>
-                </li>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="!#">Marketing</a>
-                </li>
-                <li>
-                  <i className="bi bi-chevron-right"></i>{" "}
-                  <a href="!#">Graphic Design</a>
-                </li>
+                {linkServices.map((x, i) => (
+                  <li>
+                    <i className="bi bi-chevron-right"></i>{" "}
+                    <a target="_blank" rel="noreferrer" href={x.url}>
+                      {x.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-              <h4>Contact Us</h4>
+              <h4>Get in Touch</h4>
               <p>
-                A108 Adam Street <br />
-                New York, NY 535022
+                Akvo Bamako <br />
+                Rue 17 -Porte 305
                 <br />
-                United States <br />
+                Badalabougou Est BP 2220
                 <br />
-                <strong>Phone:</strong> +1 5589 55488 55
+                Bamako Mali
                 <br />
-                <strong>Email:</strong> info@example.com
+                <br />
+                <strong>Email:</strong> info@akvo.org
                 <br />
               </p>
             </div>

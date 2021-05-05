@@ -28,6 +28,7 @@
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.2",
     "react-simple-maps": "^2.3.0",
+    "remixicon": "^2.5.0",
     "swiper": "^6.5.9",
     "web-vitals": "^1.0.1"
   },

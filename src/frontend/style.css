@@ -1515,10 +1515,28 @@ section {
   border-bottom: 1px solid #e1ecff;
   padding: 60px 0 30px 0;
 }
+.clients h2 {
+  font-size: 20px;
+  color: #012970;
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+}
+
+.clients p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  padding: 20px;
+}
 
 .clients .clients-slider .swiper-slide img {
-  opacity: 0.5;
   transition: 0.3s;
+}
+
+.clients .swipper-wrapper {
+  min-height: 200px;
 }
 
 .clients .clients-slider .swiper-slide img:hover {
