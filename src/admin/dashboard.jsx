@@ -3,6 +3,8 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { Sidebar, Topbar } from "./modules";
 import * as Icon from "react-feather";
 import { Route, Switch, useParams, useHistory } from "react-router";
+import "./style-backend.css";
+import "./style.scss";
 
 import Activity from "./activity";
 import ActivityNew from "./activity-new";

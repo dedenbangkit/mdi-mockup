@@ -1,8 +1,8 @@
 import React from "react";
 import featureTwo from "../assets/img/features-2.png";
-import featureThree from "../assets/img/features-3.png";
-import valuesOne from "../assets/img/values-1.png";
-import valuesThree from "../assets/img/values-3.png";
+import featureFive from "../assets/img/features-5.png";
+import valuesOne from "../assets/img/values-1-black.png";
+import valuesThree from "../assets/img/values-3-black.png";
 
 const platformApproach = [
   { name: "Data Providers", list: ["Collectors", "Crowd", "Satellites"] },
@@ -127,7 +127,7 @@ const Feature2 = () => {
         <div className="col-xl-8 d-flex content">
           <div className="row align-self-center gy-4">
             {Feature2Data.map((x, i) => (
-              <div className="col-md-6 icon-box" data-aos="fade-up">
+              <div key={i} className="col-md-6 icon-box" data-aos="fade-up">
                 <i
                   className={`ri-${x.icon}-fill`}
                   style={{ color: x.color }}
@@ -145,7 +145,7 @@ const Feature2 = () => {
           data-aos="fade-right"
           data-aos-delay="100"
         >
-          <img src={featureThree} className="img-fluid p-4" alt="" />
+          <img src={featureFive} className="img-fluid p-4" alt="" />
         </div>
       </div>
     </div>
@@ -177,10 +177,18 @@ const Feature3 = () => {
   return (
     <div className="row feture-tabs" data-aos="fade-up">
       <div className="col-lg-6">
-        <img src={featureTwo} className="img-fluid" alt="" />
+        <img
+          src={featureTwo}
+          className="img-fluid"
+          alt=""
+          style={{
+            marginTop: "30px",
+            marginLeft: "-30px",
+          }}
+        />
       </div>
       <div className="col-lg-6">
-        <h3>Services and Technology</h3>
+        <h3 style={{ paddingBottom: "1rem" }}>Services and Technology</h3>
 
         <div className="tab-content">
           <div className="tab-pane fade show active" id="tab1">

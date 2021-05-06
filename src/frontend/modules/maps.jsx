@@ -9,8 +9,6 @@ import {
 import { scaleQuantile } from "d3-scale";
 import "./maps.css";
 
-const mainColor = ["#4154f1", "#bb0852", "#15be56", "#ee6c20"];
-
 const geoUrl = "/json/mali-topo.json";
 
 const MapChart = ({ projects, markers }) => {

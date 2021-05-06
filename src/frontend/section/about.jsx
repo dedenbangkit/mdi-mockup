@@ -1,5 +1,17 @@
 import React from "react";
-import About1 from "../assets/img/about.jpeg";
+import People4 from "../assets/img/people/people-4.jpeg";
+
+const listWorkflow = [
+  "Organisation on-boarding",
+  "Survey instruments setup",
+  "Enumerator recruitment",
+  "Rollout surveys",
+  "Monitor incoming data",
+  "Approval workflow",
+  "Payments & Financial Report",
+  "Advanced analysis",
+  "Data sharing",
+];
 
 const About = () => {
   return (
@@ -20,6 +32,14 @@ const About = () => {
                 A multi tenant portal for partners and a mobile application with
                 various enumerator functionalities.
               </p>
+              <ul>
+                {listWorkflow.map((x, i) => (
+                  <li key={i}>
+                    <i className="ri-arrow-right-circle-line"></i>
+                    {x}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
@@ -28,7 +48,7 @@ const About = () => {
             data-aos="zoom-out"
             data-aos-delay="200"
           >
-            <img src={About1} className="img-fluid" alt="" />
+            <img src={People4} className="img-fluid" alt="" />
           </div>
         </div>
       </div>

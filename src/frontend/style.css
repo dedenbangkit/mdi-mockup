@@ -184,7 +184,7 @@ section {
 
 .header .logo img {
   max-height: 40px;
-  margin-right: 6px;
+  margin-right: 18px;
 }
 
 .header .logo span {
@@ -194,6 +194,9 @@ section {
   color: #012970;
   font-family: "Exo 2", sans-serif;
   margin-top: 3px;
+}
+.header .logo span.secondary {
+  color: #15be56;
 }
 
 /*--------------------------------------------------------------
@@ -223,7 +226,7 @@ section {
   cursor: pointer;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
+  padding: 10px 20px;
   font-family: "Exo 2", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -529,6 +532,53 @@ section {
   padding: 40px;
 }
 
+.about .content ul {
+  padding: 0rem;
+  margin-left: -40px;
+  margin-right: -40px;
+  margin-bottom: -40px;
+}
+
+.about .content ul li {
+  list-style: none;
+  font-size: 1.2rem;
+  display: block;
+  padding: 5px;
+  border-radius: 0px;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+  cursor: pointer;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.about .content ul li:hover {
+  border-radius: 5px;
+  color: #f9fafe;
+  font-weight: bold;
+  background-color: #4155f1;
+  padding-left: 1.5rem;
+}
+.about .content ul li i {
+  margin-right: 1rem;
+  color: #4155f1;
+  display: inline-block;
+}
+.about .content ul li:hover i {
+  color: #f9fafe;
+}
+
+.about img {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.about img:hover {
+  box-shadow: 0px 0 30px rgb(1 41 112 / 25%);
+}
+
 .about h3 {
   font-size: 14px;
   font-weight: 700;
@@ -745,7 +795,7 @@ section {
 .features .feture-tabs .tab-content i {
   font-size: 24px;
   line-height: 0;
-  margin-right: 8px;
+  margin-right: 1.5rem;
   color: #4154f1;
 }
 
@@ -1513,7 +1563,7 @@ section {
   background-size: contain;
   border-top: 1px solid #e1ecff;
   border-bottom: 1px solid #e1ecff;
-  padding: 60px 0 30px 0;
+  padding: 60px 0 60px 0;
 }
 .clients h2 {
   font-size: 20px;
@@ -1528,7 +1578,7 @@ section {
   line-height: 1.5;
   color: #212529;
   text-align: center;
-  padding: 20px;
+  padding: 10px 20px 50px;
 }
 
 .clients .clients-slider .swiper-slide img {
@@ -2315,8 +2365,7 @@ section {
 }
 
 .footer .footer-top {
-  background: white url(./assets/img/footer-bg.png) no-repeat right top;
-  background-size: contain;
+  background: white url(./assets/img/crossword.png) repeat;
   border-top: 1px solid #e1ecff;
   border-bottom: 1px solid #e1ecff;
   padding: 60px 0 30px 0;
@@ -2339,7 +2388,7 @@ section {
 
 .footer .footer-top .footer-info .logo img {
   max-height: 40px;
-  margin-right: 6px;
+  margin-right: 18px;
 }
 
 .footer .footer-top .footer-info .logo span {
@@ -2349,6 +2398,10 @@ section {
   color: #012970;
   font-family: "Exo 2", sans-serif;
   margin-top: 3px;
+}
+
+.footer .footer-top .footer-info .logo span.secondary {
+  color: #15be56;
 }
 
 .footer .footer-top .footer-info p {
@@ -2433,4 +2486,13 @@ section {
   text-align: center;
   font-size: 13px;
   color: #012970;
+}
+
+.image-overlay-home {
+  position: absolute;
+  left: 25%;
+}
+
+.image-overlay-home img {
+  width: 300px;
 }

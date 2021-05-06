@@ -1,34 +1,54 @@
 import React from "react";
 import { Col, Row, Card, ListGroup } from "react-bootstrap";
 import newArray, { company } from "../data";
+import CountUp from "react-countup";
+
+const data = [
+  {
+    name: "Projects",
+    count: 200,
+    icon: "kanban",
+    start: 180,
+    color: "#4154f1",
+  },
+  {
+    name: "Data Submitted",
+    count: 8000,
+    icon: "clipboard-data",
+    start: 1000,
+    color: "#bb0852",
+  },
+  {
+    name: "Enumerators",
+    count: 100,
+    icon: "person-lines-fill",
+    color: "#15be56",
+  },
+];
 
 const OverView = () => {
   return (
     <Row>
-      <Col md={4}>
-        <Card>
-          <Card.Body>
-            <Card.Title>245 Enumerator Available</Card.Title>
-          </Card.Body>
-          <Card.Footer>Some quick example text</Card.Footer>
-        </Card>
-      </Col>
-      <Col md={4}>
-        <Card>
-          <Card.Body>
-            <Card.Title>49 Running Project</Card.Title>
-          </Card.Body>
-          <Card.Footer>Some quick example text</Card.Footer>
-        </Card>
-      </Col>
-      <Col md={4}>
-        <Card>
-          <Card.Body>
-            <Card.Title>6892 Data Submitted</Card.Title>
-          </Card.Body>
-          <Card.Footer>Some quick example text</Card.Footer>
-        </Card>
-      </Col>
+      {data.map((x, i) => (
+        <Col md={4} key={i}>
+          <Card>
+            <Card.Body>
+              <Card.Title className="counter">
+                <i
+                  className={`bi bi-${x.icon}`}
+                  style={{ color: x.color, paddingRight: "1rem" }}
+                ></i>
+                <CountUp
+                  start={x.start || 0}
+                  end={x.count}
+                  duration={x.count / 2}
+                />
+              </Card.Title>
+            </Card.Body>
+            <Card.Footer>{x.name}</Card.Footer>
+          </Card>
+        </Col>
+      ))}
       <Col md={9}>
         <Card>
           <Card.Body>
@@ -53,8 +73,8 @@ const OverView = () => {
               <ListGroup.Item key={i}>{company.catchPhrase()}</ListGroup.Item>
             ))}
           </ListGroup>
+          <Card.Footer>Some quick example text</Card.Footer>
         </Card>
-        <Card.Footer>Some quick example text</Card.Footer>
       </Col>
     </Row>
   );

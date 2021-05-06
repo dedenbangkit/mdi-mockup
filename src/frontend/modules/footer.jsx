@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/img/logo.png";
 
 const linkSocial = [
   {
@@ -65,8 +66,8 @@ const Footer = () => {
           <div className="row gy-4">
             <div className="col-lg-5 col-md-12 footer-info">
               <a href="index.html" className="logo d-flex align-items-center">
-                <img src="assets/img/logo.png" alt="" />
-                <span>MDI</span>
+                <img src={logo} alt="" />
+                <span>MDI</span> <span className="secondary">Platform</span>
               </a>
               <p>
                 We apply the principles of open source software, open content
@@ -113,7 +114,7 @@ const Footer = () => {
               <h4>Our Services</h4>
               <ul>
                 {linkServices.map((x, i) => (
-                  <li>
+                  <li key={i}>
                     <i className="bi bi-chevron-right"></i>{" "}
                     <a target="_blank" rel="noreferrer" href={x.url}>
                       {x.label}

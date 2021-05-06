@@ -10,10 +10,12 @@ const EnumeratorFind = () => {
       {data.map((x, i) => (
         <Col md={3} key={i}>
           <Card>
+            <Card.Header style={{ textAlign: "center" }}>
+              {name.firstName()}
+            </Card.Header>
             <Badge variant="light" style={{ float: "right" }}>
               {name.jobDescriptor()}
             </Badge>
-            <Card.Header>{name.firstName()}</Card.Header>
             <Card.Img
               variant="top"
               alt={`https://picsum.photos/id/${i}/100/100`}
