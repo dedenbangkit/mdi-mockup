@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logo/logo-mdi.png";
 
 const Header = () => {
   const prevScrollY = useRef(0);
@@ -40,7 +40,6 @@ const Header = () => {
       <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="#hero" className="scrollto logo d-flex align-items-center">
           <img src={logo} alt="logo" />
-          <span>MDI</span> <span className="secondary">Platform</span>
         </a>
         <nav id="navbar" className="navbar">
           <ul>

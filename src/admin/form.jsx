@@ -29,7 +29,7 @@ const Form = () => {
                 Target
               </th>
               <th style={{ textAlign: "center" }} width={50}>
-                Archived
+                Achived
               </th>
               <th style={{ textAlign: "center" }} width={100}>
                 Action
@@ -37,7 +37,7 @@ const Form = () => {
             </tr>
           </thead>
           <tbody>
-            {newArray().map((x, i) => (
+            {newArray(15).map((x, i) => (
               <tr key={i}>
                 <td align="center">{i + 1}</td>
                 <td>{company.catchPhrase()}</td>

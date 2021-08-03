@@ -27,7 +27,7 @@ const About = () => {
             data-aos-delay="200"
           >
             <div className="content">
-              <h2>MDI Platform</h2>
+              <h2>MaliDEX</h2>
               <p>
                 A multi tenant portal for partners and a mobile application with
                 various enumerator functionalities.

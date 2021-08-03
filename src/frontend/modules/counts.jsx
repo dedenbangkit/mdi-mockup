@@ -4,21 +4,21 @@ import CountUp from "react-countup";
 const data = [
   {
     name: "Projects",
-    count: 200,
+    count: 90,
     icon: "kanban",
-    start: 180,
+    start: 80,
     color: "#4154f1",
   },
   {
     name: "Data Submitted",
-    count: 8000,
+    count: 10120,
     icon: "clipboard-data",
-    start: 1000,
+    start: 10110,
     color: "#bb0852",
   },
   {
     name: "Enumerators",
-    count: 100,
+    count: 112,
     icon: "person-lines-fill",
     color: "#15be56",
   },
@@ -39,11 +39,7 @@ const Counts = () => {
             <div className="count-box">
               <i className={`bi bi-${x.icon}`} style={{ color: x.color }}></i>
               <div>
-                <CountUp
-                  start={x.start || 0}
-                  end={x.count}
-                  duration={x.count / 2}
-                />
+                <CountUp start={x.start || 0} end={x.count} duration={2} />
                 <p>{x.name}</p>
               </div>
             </div>

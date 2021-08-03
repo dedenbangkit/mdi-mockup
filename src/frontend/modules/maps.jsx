@@ -34,7 +34,7 @@ const MapChart = ({ projects, markers }) => {
     <ComposableMap
       projectionConfig={{ scale: 800, projection: "geoEqualEarth" }}
       style={{
-        marginTop: "-50px",
+        marginTop: "-60px",
         height: window.innerHeight,
       }}
     >

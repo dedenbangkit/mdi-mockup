@@ -26,7 +26,7 @@ const Home = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-6 d-flex flex-column justify-content-center">
-            <h1 data-aos="fade-up">Mali Data Initiative</h1>
+            <h1 data-aos="fade-up">Mali DEX</h1>
             <h2 data-aos="fade-up" data-aos-delay="400">
               Access reliable data trought a network of{" "}
               <b>local field agents</b>

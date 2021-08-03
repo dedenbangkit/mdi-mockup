@@ -34,7 +34,7 @@ const Activity = () => {
             </tr>
           </thead>
           <tbody>
-            {newArray().map((x, i) => (
+            {newArray(20).map((x, i) => (
               <tr key={i}>
                 <td align="center">{i + 1}</td>
                 <td>{lorem.sentences(1)}</td>

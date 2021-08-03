@@ -6,21 +6,21 @@ import CountUp from "react-countup";
 const data = [
   {
     name: "Projects",
-    count: 200,
+    count: 6,
     icon: "kanban",
-    start: 180,
+    start: 0,
     color: "#4154f1",
   },
   {
     name: "Data Submitted",
-    count: 8000,
+    count: 2145,
     icon: "clipboard-data",
-    start: 1000,
+    start: 2145,
     color: "#bb0852",
   },
   {
     name: "Enumerators",
-    count: 100,
+    count: 35,
     icon: "person-lines-fill",
     color: "#15be56",
   },
@@ -38,11 +38,7 @@ const OverView = () => {
                   className={`bi bi-${x.icon}`}
                   style={{ color: x.color, paddingRight: "1rem" }}
                 ></i>
-                <CountUp
-                  start={x.start || 0}
-                  end={x.count}
-                  duration={x.count / 2}
-                />
+                <CountUp start={x.start || 0} end={x.count} duration={2} />
               </Card.Title>
             </Card.Body>
             <Card.Footer>{x.name}</Card.Footer>

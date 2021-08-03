@@ -74,6 +74,26 @@ const Sidebar = () => {
             <Icon.UserCheck size={15} /> Assignee
           </Nav.Link>
         </Nav.Item>
+        <SubNav title="Value Added Services" />
+        <Nav.Item>
+          <Nav.Link
+            as={Link}
+            to="/admin/data-services"
+            active={page === "data-services"}
+          >
+            <Icon.Codepen size={15} /> Data Services
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link
+            as={Link}
+            to="/admin/data-qualifiers"
+            active={page === "data-qualifiers"}
+          >
+            <Icon.User size={15} /> Data Qualifiers
+          </Nav.Link>
+        </Nav.Item>
+
         <SubNav title="Administration" />
         <Nav.Item>
           <Nav.Link

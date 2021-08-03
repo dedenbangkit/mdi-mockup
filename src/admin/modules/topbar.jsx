@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, Nav, Form, FormControl } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router";
-import logo from "../../frontend/assets/img/logo.png";
+import logo from "../../frontend/assets/img/logo/logo-mdi-02.png";
 
 const Topbar = () => {
   const { page } = useParams();
@@ -10,10 +10,8 @@ const Topbar = () => {
     <Navbar className="navbar navbar-dark sticky-top flex-md-nowrap p-0">
       <Navbar.Brand href="#home" className="col-sm-3 col-md-2 mr-0">
         <img src={logo} className="logo" alt="logo" />
-        <span>MDI</span>
-        <span className="secondary">Platform</span>
       </Navbar.Brand>
-      <Form className="form-control-dark w-100">
+      <Form className="form-control-dark w-100" style={{ marginLeft: "10px" }}>
         <FormControl
           type="text"
           placeholder="Search"

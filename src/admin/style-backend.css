@@ -2,8 +2,8 @@
   color: #6cca98;
 }
 #topbar img.logo {
-  max-height: 40px;
-  margin-right: 1rem;
+  max-height: 30px;
+  margin: auto;
 }
 #page-content-wrapper .page-title {
   text-align: center;

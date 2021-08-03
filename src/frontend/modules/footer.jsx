@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logo/logo-mdi-02.png";
 
 const linkSocial = [
   {
@@ -67,7 +67,6 @@ const Footer = () => {
             <div className="col-lg-5 col-md-12 footer-info">
               <a href="index.html" className="logo d-flex align-items-center">
                 <img src={logo} alt="" />
-                <span>MDI</span> <span className="secondary">Platform</span>
               </a>
               <p>
                 We apply the principles of open source software, open content
